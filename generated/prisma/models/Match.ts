@@ -524,6 +524,7 @@ export type MatchCreateOrConnectWithoutLostItemInput = {
 
 export type MatchCreateManyLostItemInputEnvelope = {
   data: Prisma.MatchCreateManyLostItemInput | Prisma.MatchCreateManyLostItemInput[]
+  skipDuplicates?: boolean
 }
 
 export type MatchCreateWithoutFoundItemInput = {
@@ -551,6 +552,7 @@ export type MatchCreateOrConnectWithoutFoundItemInput = {
 
 export type MatchCreateManyFoundItemInputEnvelope = {
   data: Prisma.MatchCreateManyFoundItemInput | Prisma.MatchCreateManyFoundItemInput[]
+  skipDuplicates?: boolean
 }
 
 export type MatchUpsertWithWhereUniqueWithoutLostItemInput = {
@@ -1412,6 +1414,7 @@ export type MatchCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Interna
    * The data used to create many Matches.
    */
   data: Prisma.MatchCreateManyInput | Prisma.MatchCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1430,6 +1433,7 @@ export type MatchCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extension
    * The data used to create many Matches.
    */
   data: Prisma.MatchCreateManyInput | Prisma.MatchCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

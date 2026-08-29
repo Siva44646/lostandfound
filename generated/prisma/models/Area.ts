@@ -492,6 +492,7 @@ export type AreaCreateOrConnectWithoutFloorInput = {
 
 export type AreaCreateManyFloorInputEnvelope = {
   data: Prisma.AreaCreateManyFloorInput | Prisma.AreaCreateManyFloorInput[]
+  skipDuplicates?: boolean
 }
 
 export type AreaUpsertWithWhereUniqueWithoutFloorInput = {
@@ -1371,6 +1372,7 @@ export type AreaCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
    * The data used to create many Areas.
    */
   data: Prisma.AreaCreateManyInput | Prisma.AreaCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1389,6 +1391,7 @@ export type AreaCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many Areas.
    */
   data: Prisma.AreaCreateManyInput | Prisma.AreaCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

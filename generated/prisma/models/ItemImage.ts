@@ -332,6 +332,7 @@ export type ItemImageCreateOrConnectWithoutItemInput = {
 
 export type ItemImageCreateManyItemInputEnvelope = {
   data: Prisma.ItemImageCreateManyItemInput | Prisma.ItemImageCreateManyItemInput[]
+  skipDuplicates?: boolean
 }
 
 export type ItemImageUpsertWithWhereUniqueWithoutItemInput = {
@@ -1089,6 +1090,7 @@ export type ItemImageCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Int
    * The data used to create many ItemImages.
    */
   data: Prisma.ItemImageCreateManyInput | Prisma.ItemImageCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1107,6 +1109,7 @@ export type ItemImageCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Exten
    * The data used to create many ItemImages.
    */
   data: Prisma.ItemImageCreateManyInput | Prisma.ItemImageCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

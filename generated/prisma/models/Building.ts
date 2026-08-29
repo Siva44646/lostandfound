@@ -414,6 +414,7 @@ export type BuildingCreateOrConnectWithoutCampusInput = {
 
 export type BuildingCreateManyCampusInputEnvelope = {
   data: Prisma.BuildingCreateManyCampusInput | Prisma.BuildingCreateManyCampusInput[]
+  skipDuplicates?: boolean
 }
 
 export type BuildingUpsertWithWhereUniqueWithoutCampusInput = {
@@ -1330,6 +1331,7 @@ export type BuildingCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
    * The data used to create many Buildings.
    */
   data: Prisma.BuildingCreateManyInput | Prisma.BuildingCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1348,6 +1350,7 @@ export type BuildingCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extens
    * The data used to create many Buildings.
    */
   data: Prisma.BuildingCreateManyInput | Prisma.BuildingCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

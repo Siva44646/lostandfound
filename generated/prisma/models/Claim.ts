@@ -472,6 +472,7 @@ export type ClaimCreateOrConnectWithoutClaimantInput = {
 
 export type ClaimCreateManyClaimantInputEnvelope = {
   data: Prisma.ClaimCreateManyClaimantInput | Prisma.ClaimCreateManyClaimantInput[]
+  skipDuplicates?: boolean
 }
 
 export type ClaimUpsertWithWhereUniqueWithoutClaimantInput = {
@@ -528,6 +529,7 @@ export type ClaimCreateOrConnectWithoutItemInput = {
 
 export type ClaimCreateManyItemInputEnvelope = {
   data: Prisma.ClaimCreateManyItemInput | Prisma.ClaimCreateManyItemInput[]
+  skipDuplicates?: boolean
 }
 
 export type ClaimUpsertWithWhereUniqueWithoutItemInput = {
@@ -1360,6 +1362,7 @@ export type ClaimCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Interna
    * The data used to create many Claims.
    */
   data: Prisma.ClaimCreateManyInput | Prisma.ClaimCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1378,6 +1381,7 @@ export type ClaimCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extension
    * The data used to create many Claims.
    */
   data: Prisma.ClaimCreateManyInput | Prisma.ClaimCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

@@ -57,6 +57,7 @@ export type ItemMinAggregateOutputType = {
   contactPref: string | null
   distinguishingFeatures: string | null
   currentPossession: string | null
+  idCardImageUrl: string | null
   userId: string | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -83,6 +84,7 @@ export type ItemMaxAggregateOutputType = {
   contactPref: string | null
   distinguishingFeatures: string | null
   currentPossession: string | null
+  idCardImageUrl: string | null
   userId: string | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -109,6 +111,7 @@ export type ItemCountAggregateOutputType = {
   contactPref: number
   distinguishingFeatures: number
   currentPossession: number
+  idCardImageUrl: number
   userId: number
   createdAt: number
   updatedAt: number
@@ -147,6 +150,7 @@ export type ItemMinAggregateInputType = {
   contactPref?: true
   distinguishingFeatures?: true
   currentPossession?: true
+  idCardImageUrl?: true
   userId?: true
   createdAt?: true
   updatedAt?: true
@@ -173,6 +177,7 @@ export type ItemMaxAggregateInputType = {
   contactPref?: true
   distinguishingFeatures?: true
   currentPossession?: true
+  idCardImageUrl?: true
   userId?: true
   createdAt?: true
   updatedAt?: true
@@ -199,6 +204,7 @@ export type ItemCountAggregateInputType = {
   contactPref?: true
   distinguishingFeatures?: true
   currentPossession?: true
+  idCardImageUrl?: true
   userId?: true
   createdAt?: true
   updatedAt?: true
@@ -312,6 +318,7 @@ export type ItemGroupByOutputType = {
   contactPref: string | null
   distinguishingFeatures: string | null
   currentPossession: string | null
+  idCardImageUrl: string | null
   userId: string
   createdAt: Date
   updatedAt: Date
@@ -361,6 +368,7 @@ export type ItemWhereInput = {
   contactPref?: Prisma.StringNullableFilter<"Item"> | string | null
   distinguishingFeatures?: Prisma.StringNullableFilter<"Item"> | string | null
   currentPossession?: Prisma.StringNullableFilter<"Item"> | string | null
+  idCardImageUrl?: Prisma.StringNullableFilter<"Item"> | string | null
   userId?: Prisma.StringFilter<"Item"> | string
   createdAt?: Prisma.DateTimeFilter<"Item"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Item"> | Date | string
@@ -397,6 +405,7 @@ export type ItemOrderByWithRelationInput = {
   contactPref?: Prisma.SortOrderInput | Prisma.SortOrder
   distinguishingFeatures?: Prisma.SortOrderInput | Prisma.SortOrder
   currentPossession?: Prisma.SortOrderInput | Prisma.SortOrder
+  idCardImageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   userId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -436,6 +445,7 @@ export type ItemWhereUniqueInput = Prisma.AtLeast<{
   contactPref?: Prisma.StringNullableFilter<"Item"> | string | null
   distinguishingFeatures?: Prisma.StringNullableFilter<"Item"> | string | null
   currentPossession?: Prisma.StringNullableFilter<"Item"> | string | null
+  idCardImageUrl?: Prisma.StringNullableFilter<"Item"> | string | null
   userId?: Prisma.StringFilter<"Item"> | string
   createdAt?: Prisma.DateTimeFilter<"Item"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Item"> | Date | string
@@ -472,6 +482,7 @@ export type ItemOrderByWithAggregationInput = {
   contactPref?: Prisma.SortOrderInput | Prisma.SortOrder
   distinguishingFeatures?: Prisma.SortOrderInput | Prisma.SortOrder
   currentPossession?: Prisma.SortOrderInput | Prisma.SortOrder
+  idCardImageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   userId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -506,6 +517,7 @@ export type ItemScalarWhereWithAggregatesInput = {
   contactPref?: Prisma.StringNullableWithAggregatesFilter<"Item"> | string | null
   distinguishingFeatures?: Prisma.StringNullableWithAggregatesFilter<"Item"> | string | null
   currentPossession?: Prisma.StringNullableWithAggregatesFilter<"Item"> | string | null
+  idCardImageUrl?: Prisma.StringNullableWithAggregatesFilter<"Item"> | string | null
   userId?: Prisma.StringWithAggregatesFilter<"Item"> | string
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Item"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Item"> | Date | string
@@ -527,6 +539,7 @@ export type ItemCreateInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -562,6 +575,7 @@ export type ItemUncheckedCreateInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -587,6 +601,7 @@ export type ItemUpdateInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -622,6 +637,7 @@ export type ItemUncheckedUpdateInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -652,6 +668,7 @@ export type ItemCreateManyInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -673,6 +690,7 @@ export type ItemUpdateManyMutationInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -698,6 +716,7 @@ export type ItemUncheckedUpdateManyInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -734,6 +753,7 @@ export type ItemCountOrderByAggregateInput = {
   contactPref?: Prisma.SortOrder
   distinguishingFeatures?: Prisma.SortOrder
   currentPossession?: Prisma.SortOrder
+  idCardImageUrl?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -765,6 +785,7 @@ export type ItemMaxOrderByAggregateInput = {
   contactPref?: Prisma.SortOrder
   distinguishingFeatures?: Prisma.SortOrder
   currentPossession?: Prisma.SortOrder
+  idCardImageUrl?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -791,6 +812,7 @@ export type ItemMinOrderByAggregateInput = {
   contactPref?: Prisma.SortOrder
   distinguishingFeatures?: Prisma.SortOrder
   currentPossession?: Prisma.SortOrder
+  idCardImageUrl?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -1130,6 +1152,7 @@ export type ItemCreateWithoutCollegeInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   campus?: Prisma.CampusCreateNestedOneWithoutItemsInput
@@ -1163,6 +1186,7 @@ export type ItemUncheckedCreateWithoutCollegeInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1179,6 +1203,7 @@ export type ItemCreateOrConnectWithoutCollegeInput = {
 
 export type ItemCreateManyCollegeInputEnvelope = {
   data: Prisma.ItemCreateManyCollegeInput | Prisma.ItemCreateManyCollegeInput[]
+  skipDuplicates?: boolean
 }
 
 export type ItemUpsertWithWhereUniqueWithoutCollegeInput = {
@@ -1221,6 +1246,7 @@ export type ItemScalarWhereInput = {
   contactPref?: Prisma.StringNullableFilter<"Item"> | string | null
   distinguishingFeatures?: Prisma.StringNullableFilter<"Item"> | string | null
   currentPossession?: Prisma.StringNullableFilter<"Item"> | string | null
+  idCardImageUrl?: Prisma.StringNullableFilter<"Item"> | string | null
   userId?: Prisma.StringFilter<"Item"> | string
   createdAt?: Prisma.DateTimeFilter<"Item"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Item"> | Date | string
@@ -1242,6 +1268,7 @@ export type ItemCreateWithoutCampusInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -1275,6 +1302,7 @@ export type ItemUncheckedCreateWithoutCampusInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1291,6 +1319,7 @@ export type ItemCreateOrConnectWithoutCampusInput = {
 
 export type ItemCreateManyCampusInputEnvelope = {
   data: Prisma.ItemCreateManyCampusInput | Prisma.ItemCreateManyCampusInput[]
+  skipDuplicates?: boolean
 }
 
 export type ItemUpsertWithWhereUniqueWithoutCampusInput = {
@@ -1325,6 +1354,7 @@ export type ItemCreateWithoutBuildingInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -1358,6 +1388,7 @@ export type ItemUncheckedCreateWithoutBuildingInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1374,6 +1405,7 @@ export type ItemCreateOrConnectWithoutBuildingInput = {
 
 export type ItemCreateManyBuildingInputEnvelope = {
   data: Prisma.ItemCreateManyBuildingInput | Prisma.ItemCreateManyBuildingInput[]
+  skipDuplicates?: boolean
 }
 
 export type ItemUpsertWithWhereUniqueWithoutBuildingInput = {
@@ -1408,6 +1440,7 @@ export type ItemCreateWithoutFloorInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -1441,6 +1474,7 @@ export type ItemUncheckedCreateWithoutFloorInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1457,6 +1491,7 @@ export type ItemCreateOrConnectWithoutFloorInput = {
 
 export type ItemCreateManyFloorInputEnvelope = {
   data: Prisma.ItemCreateManyFloorInput | Prisma.ItemCreateManyFloorInput[]
+  skipDuplicates?: boolean
 }
 
 export type ItemUpsertWithWhereUniqueWithoutFloorInput = {
@@ -1491,6 +1526,7 @@ export type ItemCreateWithoutAreaInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -1524,6 +1560,7 @@ export type ItemUncheckedCreateWithoutAreaInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1540,6 +1577,7 @@ export type ItemCreateOrConnectWithoutAreaInput = {
 
 export type ItemCreateManyAreaInputEnvelope = {
   data: Prisma.ItemCreateManyAreaInput | Prisma.ItemCreateManyAreaInput[]
+  skipDuplicates?: boolean
 }
 
 export type ItemUpsertWithWhereUniqueWithoutAreaInput = {
@@ -1574,6 +1612,7 @@ export type ItemCreateWithoutUserInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -1608,6 +1647,7 @@ export type ItemUncheckedCreateWithoutUserInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   images?: Prisma.ItemImageUncheckedCreateNestedManyWithoutItemInput
@@ -1623,6 +1663,7 @@ export type ItemCreateOrConnectWithoutUserInput = {
 
 export type ItemCreateManyUserInputEnvelope = {
   data: Prisma.ItemCreateManyUserInput | Prisma.ItemCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type ItemUpsertWithWhereUniqueWithoutUserInput = {
@@ -1657,6 +1698,7 @@ export type ItemCreateWithoutImagesInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -1691,6 +1733,7 @@ export type ItemUncheckedCreateWithoutImagesInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1731,6 +1774,7 @@ export type ItemUpdateWithoutImagesInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -1765,6 +1809,7 @@ export type ItemUncheckedUpdateWithoutImagesInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1789,6 +1834,7 @@ export type ItemCreateWithoutMatchesAsLostInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -1823,6 +1869,7 @@ export type ItemUncheckedCreateWithoutMatchesAsLostInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1852,6 +1899,7 @@ export type ItemCreateWithoutMatchesAsFoundInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -1886,6 +1934,7 @@ export type ItemUncheckedCreateWithoutMatchesAsFoundInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1926,6 +1975,7 @@ export type ItemUpdateWithoutMatchesAsLostInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -1960,6 +2010,7 @@ export type ItemUncheckedUpdateWithoutMatchesAsLostInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1995,6 +2046,7 @@ export type ItemUpdateWithoutMatchesAsFoundInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -2029,6 +2081,7 @@ export type ItemUncheckedUpdateWithoutMatchesAsFoundInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2053,6 +2106,7 @@ export type ItemCreateWithoutClaimsInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   college?: Prisma.CollegeCreateNestedOneWithoutItemsInput
@@ -2087,6 +2141,7 @@ export type ItemUncheckedCreateWithoutClaimsInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -2127,6 +2182,7 @@ export type ItemUpdateWithoutClaimsInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -2161,6 +2217,7 @@ export type ItemUncheckedUpdateWithoutClaimsInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2189,6 +2246,7 @@ export type ItemCreateManyCollegeInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -2210,6 +2268,7 @@ export type ItemUpdateWithoutCollegeInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   campus?: Prisma.CampusUpdateOneWithoutItemsNestedInput
@@ -2243,6 +2302,7 @@ export type ItemUncheckedUpdateWithoutCollegeInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2272,6 +2332,7 @@ export type ItemUncheckedUpdateManyWithoutCollegeInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2297,6 +2358,7 @@ export type ItemCreateManyCampusInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -2318,6 +2380,7 @@ export type ItemUpdateWithoutCampusInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -2351,6 +2414,7 @@ export type ItemUncheckedUpdateWithoutCampusInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2380,6 +2444,7 @@ export type ItemUncheckedUpdateManyWithoutCampusInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2405,6 +2470,7 @@ export type ItemCreateManyBuildingInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -2426,6 +2492,7 @@ export type ItemUpdateWithoutBuildingInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -2459,6 +2526,7 @@ export type ItemUncheckedUpdateWithoutBuildingInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2488,6 +2556,7 @@ export type ItemUncheckedUpdateManyWithoutBuildingInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2513,6 +2582,7 @@ export type ItemCreateManyFloorInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -2534,6 +2604,7 @@ export type ItemUpdateWithoutFloorInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -2567,6 +2638,7 @@ export type ItemUncheckedUpdateWithoutFloorInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2596,6 +2668,7 @@ export type ItemUncheckedUpdateManyWithoutFloorInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2621,6 +2694,7 @@ export type ItemCreateManyAreaInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   userId: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -2642,6 +2716,7 @@ export type ItemUpdateWithoutAreaInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -2675,6 +2750,7 @@ export type ItemUncheckedUpdateWithoutAreaInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2704,6 +2780,7 @@ export type ItemUncheckedUpdateManyWithoutAreaInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -2730,6 +2807,7 @@ export type ItemCreateManyUserInput = {
   contactPref?: string | null
   distinguishingFeatures?: string | null
   currentPossession?: string | null
+  idCardImageUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
 }
@@ -2750,6 +2828,7 @@ export type ItemUpdateWithoutUserInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   college?: Prisma.CollegeUpdateOneWithoutItemsNestedInput
@@ -2784,6 +2863,7 @@ export type ItemUncheckedUpdateWithoutUserInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   images?: Prisma.ItemImageUncheckedUpdateManyWithoutItemNestedInput
@@ -2813,6 +2893,7 @@ export type ItemUncheckedUpdateManyWithoutUserInput = {
   contactPref?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   distinguishingFeatures?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   currentPossession?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idCardImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -2896,6 +2977,7 @@ export type ItemSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   contactPref?: boolean
   distinguishingFeatures?: boolean
   currentPossession?: boolean
+  idCardImageUrl?: boolean
   userId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
@@ -2933,6 +3015,7 @@ export type ItemSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   contactPref?: boolean
   distinguishingFeatures?: boolean
   currentPossession?: boolean
+  idCardImageUrl?: boolean
   userId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
@@ -2965,6 +3048,7 @@ export type ItemSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   contactPref?: boolean
   distinguishingFeatures?: boolean
   currentPossession?: boolean
+  idCardImageUrl?: boolean
   userId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
@@ -2997,12 +3081,13 @@ export type ItemSelectScalar = {
   contactPref?: boolean
   distinguishingFeatures?: boolean
   currentPossession?: boolean
+  idCardImageUrl?: boolean
   userId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type ItemOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "type" | "status" | "category" | "title" | "description" | "date" | "time" | "locationName" | "locationLat" | "locationLng" | "collegeId" | "campusId" | "buildingId" | "floorId" | "areaId" | "reward" | "contactPref" | "distinguishingFeatures" | "currentPossession" | "userId" | "createdAt" | "updatedAt", ExtArgs["result"]["item"]>
+export type ItemOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "type" | "status" | "category" | "title" | "description" | "date" | "time" | "locationName" | "locationLat" | "locationLng" | "collegeId" | "campusId" | "buildingId" | "floorId" | "areaId" | "reward" | "contactPref" | "distinguishingFeatures" | "currentPossession" | "idCardImageUrl" | "userId" | "createdAt" | "updatedAt", ExtArgs["result"]["item"]>
 export type ItemInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   college?: boolean | Prisma.Item$collegeArgs<ExtArgs>
   campus?: boolean | Prisma.Item$campusArgs<ExtArgs>
@@ -3068,6 +3153,7 @@ export type $ItemPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     contactPref: string | null
     distinguishingFeatures: string | null
     currentPossession: string | null
+    idCardImageUrl: string | null
     userId: string
     createdAt: Date
     updatedAt: Date
@@ -3524,6 +3610,7 @@ export interface ItemFieldRefs {
   readonly contactPref: Prisma.FieldRef<"Item", 'String'>
   readonly distinguishingFeatures: Prisma.FieldRef<"Item", 'String'>
   readonly currentPossession: Prisma.FieldRef<"Item", 'String'>
+  readonly idCardImageUrl: Prisma.FieldRef<"Item", 'String'>
   readonly userId: Prisma.FieldRef<"Item", 'String'>
   readonly createdAt: Prisma.FieldRef<"Item", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Item", 'DateTime'>
@@ -3761,6 +3848,7 @@ export type ItemCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
    * The data used to create many Items.
    */
   data: Prisma.ItemCreateManyInput | Prisma.ItemCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -3779,6 +3867,7 @@ export type ItemCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many Items.
    */
   data: Prisma.ItemCreateManyInput | Prisma.ItemCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

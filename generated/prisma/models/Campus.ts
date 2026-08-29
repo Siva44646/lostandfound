@@ -390,6 +390,7 @@ export type CampusCreateOrConnectWithoutCollegeInput = {
 
 export type CampusCreateManyCollegeInputEnvelope = {
   data: Prisma.CampusCreateManyCollegeInput | Prisma.CampusCreateManyCollegeInput[]
+  skipDuplicates?: boolean
 }
 
 export type CampusUpsertWithWhereUniqueWithoutCollegeInput = {
@@ -1287,6 +1288,7 @@ export type CampusCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Intern
    * The data used to create many Campuses.
    */
   data: Prisma.CampusCreateManyInput | Prisma.CampusCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1305,6 +1307,7 @@ export type CampusCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensio
    * The data used to create many Campuses.
    */
   data: Prisma.CampusCreateManyInput | Prisma.CampusCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

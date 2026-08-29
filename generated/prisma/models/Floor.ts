@@ -390,6 +390,7 @@ export type FloorCreateOrConnectWithoutBuildingInput = {
 
 export type FloorCreateManyBuildingInputEnvelope = {
   data: Prisma.FloorCreateManyBuildingInput | Prisma.FloorCreateManyBuildingInput[]
+  skipDuplicates?: boolean
 }
 
 export type FloorUpsertWithWhereUniqueWithoutBuildingInput = {
@@ -1287,6 +1288,7 @@ export type FloorCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Interna
    * The data used to create many Floors.
    */
   data: Prisma.FloorCreateManyInput | Prisma.FloorCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1305,6 +1307,7 @@ export type FloorCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extension
    * The data used to create many Floors.
    */
   data: Prisma.FloorCreateManyInput | Prisma.FloorCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

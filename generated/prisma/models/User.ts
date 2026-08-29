@@ -29,6 +29,7 @@ export type UserMinAggregateOutputType = {
   name: string | null
   email: string | null
   passwordHash: string | null
+  rollNumber: string | null
   image: string | null
   role: string | null
   collegeId: string | null
@@ -41,6 +42,7 @@ export type UserMaxAggregateOutputType = {
   name: string | null
   email: string | null
   passwordHash: string | null
+  rollNumber: string | null
   image: string | null
   role: string | null
   collegeId: string | null
@@ -53,6 +55,7 @@ export type UserCountAggregateOutputType = {
   name: number
   email: number
   passwordHash: number
+  rollNumber: number
   image: number
   role: number
   collegeId: number
@@ -67,6 +70,7 @@ export type UserMinAggregateInputType = {
   name?: true
   email?: true
   passwordHash?: true
+  rollNumber?: true
   image?: true
   role?: true
   collegeId?: true
@@ -79,6 +83,7 @@ export type UserMaxAggregateInputType = {
   name?: true
   email?: true
   passwordHash?: true
+  rollNumber?: true
   image?: true
   role?: true
   collegeId?: true
@@ -91,6 +96,7 @@ export type UserCountAggregateInputType = {
   name?: true
   email?: true
   passwordHash?: true
+  rollNumber?: true
   image?: true
   role?: true
   collegeId?: true
@@ -176,6 +182,7 @@ export type UserGroupByOutputType = {
   name: string | null
   email: string
   passwordHash: string | null
+  rollNumber: string | null
   image: string | null
   role: string
   collegeId: string | null
@@ -209,6 +216,7 @@ export type UserWhereInput = {
   name?: Prisma.StringNullableFilter<"User"> | string | null
   email?: Prisma.StringFilter<"User"> | string
   passwordHash?: Prisma.StringNullableFilter<"User"> | string | null
+  rollNumber?: Prisma.StringNullableFilter<"User"> | string | null
   image?: Prisma.StringNullableFilter<"User"> | string | null
   role?: Prisma.StringFilter<"User"> | string
   collegeId?: Prisma.StringNullableFilter<"User"> | string | null
@@ -227,6 +235,7 @@ export type UserOrderByWithRelationInput = {
   name?: Prisma.SortOrderInput | Prisma.SortOrder
   email?: Prisma.SortOrder
   passwordHash?: Prisma.SortOrderInput | Prisma.SortOrder
+  rollNumber?: Prisma.SortOrderInput | Prisma.SortOrder
   image?: Prisma.SortOrderInput | Prisma.SortOrder
   role?: Prisma.SortOrder
   collegeId?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -248,6 +257,7 @@ export type UserWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.UserWhereInput | Prisma.UserWhereInput[]
   name?: Prisma.StringNullableFilter<"User"> | string | null
   passwordHash?: Prisma.StringNullableFilter<"User"> | string | null
+  rollNumber?: Prisma.StringNullableFilter<"User"> | string | null
   image?: Prisma.StringNullableFilter<"User"> | string | null
   role?: Prisma.StringFilter<"User"> | string
   collegeId?: Prisma.StringNullableFilter<"User"> | string | null
@@ -266,6 +276,7 @@ export type UserOrderByWithAggregationInput = {
   name?: Prisma.SortOrderInput | Prisma.SortOrder
   email?: Prisma.SortOrder
   passwordHash?: Prisma.SortOrderInput | Prisma.SortOrder
+  rollNumber?: Prisma.SortOrderInput | Prisma.SortOrder
   image?: Prisma.SortOrderInput | Prisma.SortOrder
   role?: Prisma.SortOrder
   collegeId?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -284,6 +295,7 @@ export type UserScalarWhereWithAggregatesInput = {
   name?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
   email?: Prisma.StringWithAggregatesFilter<"User"> | string
   passwordHash?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
+  rollNumber?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
   image?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
   role?: Prisma.StringWithAggregatesFilter<"User"> | string
   collegeId?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
@@ -296,6 +308,7 @@ export type UserCreateInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -313,6 +326,7 @@ export type UserUncheckedCreateInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   collegeId?: string | null
@@ -330,6 +344,7 @@ export type UserUpdateInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -347,6 +362,7 @@ export type UserUncheckedUpdateInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   collegeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -364,6 +380,7 @@ export type UserCreateManyInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   collegeId?: string | null
@@ -376,6 +393,7 @@ export type UserUpdateManyMutationInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -387,6 +405,7 @@ export type UserUncheckedUpdateManyInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   collegeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -409,6 +428,7 @@ export type UserCountOrderByAggregateInput = {
   name?: Prisma.SortOrder
   email?: Prisma.SortOrder
   passwordHash?: Prisma.SortOrder
+  rollNumber?: Prisma.SortOrder
   image?: Prisma.SortOrder
   role?: Prisma.SortOrder
   collegeId?: Prisma.SortOrder
@@ -421,6 +441,7 @@ export type UserMaxOrderByAggregateInput = {
   name?: Prisma.SortOrder
   email?: Prisma.SortOrder
   passwordHash?: Prisma.SortOrder
+  rollNumber?: Prisma.SortOrder
   image?: Prisma.SortOrder
   role?: Prisma.SortOrder
   collegeId?: Prisma.SortOrder
@@ -433,6 +454,7 @@ export type UserMinOrderByAggregateInput = {
   name?: Prisma.SortOrder
   email?: Prisma.SortOrder
   passwordHash?: Prisma.SortOrder
+  rollNumber?: Prisma.SortOrder
   image?: Prisma.SortOrder
   role?: Prisma.SortOrder
   collegeId?: Prisma.SortOrder
@@ -562,6 +584,7 @@ export type UserCreateWithoutCollegeInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -578,6 +601,7 @@ export type UserUncheckedCreateWithoutCollegeInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -596,6 +620,7 @@ export type UserCreateOrConnectWithoutCollegeInput = {
 
 export type UserCreateManyCollegeInputEnvelope = {
   data: Prisma.UserCreateManyCollegeInput | Prisma.UserCreateManyCollegeInput[]
+  skipDuplicates?: boolean
 }
 
 export type UserUpsertWithWhereUniqueWithoutCollegeInput = {
@@ -622,6 +647,7 @@ export type UserScalarWhereInput = {
   name?: Prisma.StringNullableFilter<"User"> | string | null
   email?: Prisma.StringFilter<"User"> | string
   passwordHash?: Prisma.StringNullableFilter<"User"> | string | null
+  rollNumber?: Prisma.StringNullableFilter<"User"> | string | null
   image?: Prisma.StringNullableFilter<"User"> | string | null
   role?: Prisma.StringFilter<"User"> | string
   collegeId?: Prisma.StringNullableFilter<"User"> | string | null
@@ -634,6 +660,7 @@ export type UserCreateWithoutItemsInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -650,6 +677,7 @@ export type UserUncheckedCreateWithoutItemsInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   collegeId?: string | null
@@ -682,6 +710,7 @@ export type UserUpdateWithoutItemsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -698,6 +727,7 @@ export type UserUncheckedUpdateWithoutItemsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   collegeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -714,6 +744,7 @@ export type UserCreateWithoutClaimsInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -730,6 +761,7 @@ export type UserUncheckedCreateWithoutClaimsInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   collegeId?: string | null
@@ -762,6 +794,7 @@ export type UserUpdateWithoutClaimsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -778,6 +811,7 @@ export type UserUncheckedUpdateWithoutClaimsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   collegeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -794,6 +828,7 @@ export type UserCreateWithoutSentMessagesInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -810,6 +845,7 @@ export type UserUncheckedCreateWithoutSentMessagesInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   collegeId?: string | null
@@ -831,6 +867,7 @@ export type UserCreateWithoutRecvMessagesInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -847,6 +884,7 @@ export type UserUncheckedCreateWithoutRecvMessagesInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   collegeId?: string | null
@@ -879,6 +917,7 @@ export type UserUpdateWithoutSentMessagesInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -895,6 +934,7 @@ export type UserUncheckedUpdateWithoutSentMessagesInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   collegeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -922,6 +962,7 @@ export type UserUpdateWithoutRecvMessagesInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -938,6 +979,7 @@ export type UserUncheckedUpdateWithoutRecvMessagesInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   collegeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -954,6 +996,7 @@ export type UserCreateWithoutNotificationsInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -970,6 +1013,7 @@ export type UserUncheckedCreateWithoutNotificationsInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   collegeId?: string | null
@@ -1002,6 +1046,7 @@ export type UserUpdateWithoutNotificationsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1018,6 +1063,7 @@ export type UserUncheckedUpdateWithoutNotificationsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   collegeId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1034,6 +1080,7 @@ export type UserCreateManyCollegeInput = {
   name?: string | null
   email: string
   passwordHash?: string | null
+  rollNumber?: string | null
   image?: string | null
   role?: string
   createdAt?: Date | string
@@ -1045,6 +1092,7 @@ export type UserUpdateWithoutCollegeInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1061,6 +1109,7 @@ export type UserUncheckedUpdateWithoutCollegeInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1077,6 +1126,7 @@ export type UserUncheckedUpdateManyWithoutCollegeInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.StringFieldUpdateOperationsInput | string
   passwordHash?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rollNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   role?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1155,6 +1205,7 @@ export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   name?: boolean
   email?: boolean
   passwordHash?: boolean
+  rollNumber?: boolean
   image?: boolean
   role?: boolean
   collegeId?: boolean
@@ -1174,6 +1225,7 @@ export type UserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   name?: boolean
   email?: boolean
   passwordHash?: boolean
+  rollNumber?: boolean
   image?: boolean
   role?: boolean
   collegeId?: boolean
@@ -1187,6 +1239,7 @@ export type UserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   name?: boolean
   email?: boolean
   passwordHash?: boolean
+  rollNumber?: boolean
   image?: boolean
   role?: boolean
   collegeId?: boolean
@@ -1200,6 +1253,7 @@ export type UserSelectScalar = {
   name?: boolean
   email?: boolean
   passwordHash?: boolean
+  rollNumber?: boolean
   image?: boolean
   role?: boolean
   collegeId?: boolean
@@ -1207,7 +1261,7 @@ export type UserSelectScalar = {
   updatedAt?: boolean
 }
 
-export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "email" | "passwordHash" | "image" | "role" | "collegeId" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "email" | "passwordHash" | "rollNumber" | "image" | "role" | "collegeId" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
 export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   college?: boolean | Prisma.User$collegeArgs<ExtArgs>
   items?: boolean | Prisma.User$itemsArgs<ExtArgs>
@@ -1239,6 +1293,7 @@ export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     name: string | null
     email: string
     passwordHash: string | null
+    rollNumber: string | null
     image: string | null
     role: string
     collegeId: string | null
@@ -1677,6 +1732,7 @@ export interface UserFieldRefs {
   readonly name: Prisma.FieldRef<"User", 'String'>
   readonly email: Prisma.FieldRef<"User", 'String'>
   readonly passwordHash: Prisma.FieldRef<"User", 'String'>
+  readonly rollNumber: Prisma.FieldRef<"User", 'String'>
   readonly image: Prisma.FieldRef<"User", 'String'>
   readonly role: Prisma.FieldRef<"User", 'String'>
   readonly collegeId: Prisma.FieldRef<"User", 'String'>
@@ -1916,6 +1972,7 @@ export type UserCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
    * The data used to create many Users.
    */
   data: Prisma.UserCreateManyInput | Prisma.UserCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1934,6 +1991,7 @@ export type UserCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many Users.
    */
   data: Prisma.UserCreateManyInput | Prisma.UserCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */
