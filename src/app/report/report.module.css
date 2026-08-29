@@ -1,0 +1,108 @@
+.pageContainer {
+  padding: 4rem 1rem;
+}
+
+.reportCard {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.formRow > div {
+  flex: 1;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.fileInputContainer {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--surface-hover);
+}
+
+.fileInputContainer:hover {
+  border-color: var(--primary-400);
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadIcon {
+  color: var(--primary-500);
+  margin-bottom: 0.5rem;
+}
+
+.mapPlaceholder {
+  height: 250px;
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .reportCard {
+    padding: 1.5rem;
+  }
+}
