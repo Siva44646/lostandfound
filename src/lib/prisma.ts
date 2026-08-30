@@ -8,7 +8,10 @@ if (connectionString.includes(':6543')) {
   connectionString = connectionString.replace(':6543', ':5432');
 }
 
-const pool = new Pool({ connectionString });
+const pool = new Pool({ 
+  connectionString, 
+  ssl: { rejectUnauthorized: false } 
+});
 const adapter = new PrismaPg(pool);
 
 const globalForPrisma = globalThis as unknown as {
