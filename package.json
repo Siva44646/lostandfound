@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx prisma generate && npx prisma db push && next build",
+    "build": "npx prisma generate && DATABASE_URL=$DIRECT_URL npx prisma db push && next build",
     "start": "next start",
     "lint": "eslint"
   },
