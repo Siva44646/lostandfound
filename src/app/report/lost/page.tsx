@@ -18,6 +18,7 @@ export default function ReportLost() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [fileName, setFileName] = useState("");
+  const [idFileName, setIdFileName] = useState("");
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -28,6 +29,12 @@ export default function ReportLost() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setFileName(e.target.files[0].name);
+    }
+  };
+
+  const handleIdFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setIdFileName(e.target.files[0].name);
     }
   };
 
@@ -108,9 +115,9 @@ export default function ReportLost() {
             <div className={styles.formGroup}>
               <label htmlFor="idCardImage" className={styles.label}>College ID Card Photo (Required for Security)</label>
               <label className={styles.fileInputContainer}>
-                <input id="idCardImage" name="idCardImage" type="file" accept="image/*" required className={styles.fileInput} />
+                <input id="idCardImage" name="idCardImage" type="file" accept="image/*" required className={styles.fileInput} onChange={handleIdFileChange} />
                 <div className={styles.uploadIcon}><UploadCloud size={32} /></div>
-                <div>Upload your student/staff ID</div>
+                <div>{idFileName ? <strong>{idFileName}</strong> : "Upload your student/staff ID"}</div>
                 <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.5rem' }}>Kept secure and private.</div>
               </label>
             </div>

@@ -57,22 +57,16 @@ export async function POST(req: Request) {
     if (imageFile && imageFile.name) {
       const bytes = await imageFile.arrayBuffer();
       const buffer = Buffer.from(bytes);
-      const uniqueName = `${uuidv4()}-${imageFile.name}`;
-      const uploadPath = path.join(process.cwd(), "public", "uploads", uniqueName);
-      
-      await writeFile(uploadPath, buffer);
-      imageUrl = `/uploads/${uniqueName}`;
+      const mimeType = imageFile.type || 'image/jpeg';
+      imageUrl = `data:${mimeType};base64,${buffer.toString('base64')}`;
     }
 
     let idCardImageUrl = null;
     if (idCardImage && idCardImage.name) {
       const bytes = await idCardImage.arrayBuffer();
       const buffer = Buffer.from(bytes);
-      const uniqueName = `id-${uuidv4()}-${idCardImage.name}`;
-      const uploadPath = path.join(process.cwd(), "public", "uploads", uniqueName);
-      
-      await writeFile(uploadPath, buffer);
-      idCardImageUrl = `/uploads/${uniqueName}`;
+      const mimeType = idCardImage.type || 'image/jpeg';
+      idCardImageUrl = `data:${mimeType};base64,${buffer.toString('base64')}`;
     }
 
     const itemData: any = {
