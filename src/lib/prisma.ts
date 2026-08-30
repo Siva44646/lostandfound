@@ -3,7 +3,10 @@ import { PrismaClient } from '../../generated/prisma/client';
 import { Pool } from 'pg';
 import { PrismaPg } from '@prisma/adapter-pg';
 
-const connectionString = `${process.env.DIRECT_URL || process.env.DATABASE_URL}`;
+let connectionString = `${process.env.DIRECT_URL || process.env.DATABASE_URL}`;
+if (connectionString.includes(':6543')) {
+  connectionString = connectionString.replace(':6543', ':5432');
+}
 
 const pool = new Pool({ connectionString });
 const adapter = new PrismaPg(pool);
